@@ -1,0 +1,90 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Container",
+      "horizontalAlignment": "Center",
+      "spacing": "Medium",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Image",
+                  "url": "https://cdn-icons-png.flaticon.com/512/456/456212.png",
+                  "width": "20px",
+                  "spacing": "None",
+                  "id": "icon1"
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "0 votes (Anonymous)",
+                  "wrap": true,
+                  "id": "text1",
+                  "spacing": "Small",
+                  "horizontalAlignment": "Left"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": " question",
+      "size": "Medium",
+      "weight": "Bolder",
+      "wrap": true
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Execute",
+                  "title": "option 1",
+                  "verb": "approveClicked",
+                  "data": {
+                    "data": {
+                      "type": "answerPoll"
+                    }
+                  },
+                  "url": "https://b048ade2esc64.ngrok.io/sample-route"
+                },
+                {
+                  "type": "Action.Execute",
+                  "title": "option 2",
+                  "data": {
+                    "data": {
+                      "type": "answerPoll"
+                    }
+                  },
+                  "url": "https://b048ade2esc64.ngrok.io/sample-route"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

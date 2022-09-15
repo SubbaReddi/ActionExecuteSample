@@ -1,0 +1,77 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Container",
+      "horizontalAlignment": "Center",
+      "spacing": "Medium",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "0 votes (Anonymous)",
+                  "wrap": true,
+                  "id": "text1",
+                  "spacing": "Small",
+                  "horizontalAlignment": "Left"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": " question",
+      "size": "Medium",
+      "weight": "Bolder",
+      "wrap": true
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Execute",
+                  "title": "option 1",
+                  "verb": "approveClicked",
+                  "data": {
+                    "data": {
+                      "type": "answerPoll"
+                    }
+                  },
+                  "url": ""
+                },
+                {
+                  "type": "Action.Execute",
+                  "title": "option 2",
+                  "data": {
+                    "data": {
+                      "type": "answerPoll"
+                    }
+                  },
+                  "url": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

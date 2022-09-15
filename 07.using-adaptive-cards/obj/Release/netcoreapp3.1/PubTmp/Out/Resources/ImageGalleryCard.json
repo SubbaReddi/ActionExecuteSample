@@ -1,0 +1,92 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "separator": true,
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Meeting 1: Ignore: Test meeting",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "Time: 5:00 PM to 5:30 PM2"
+            }
+          ]
+        }
+      ],
+    },
+    {
+      "type": "ColumnSet",
+      "id": "members_1_1",
+      "isVisible": false,
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "size": "small",
+              "text": "serveinc-ali.sabunwala@yellow.ai",
+              "wrap": true
+            }
+          ],
+          "width": "stretch"
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "size": "small",
+              "text": "",
+              "wrap": true
+            }
+          ],
+          "width": "stretch"
+        }
+      ]
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Cancel this meeting",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Cancel Ignore:Test meeting",
+              "meetingId": "meet.id",
+              "value": "fvfvf"
+            }
+          }
+        },
+        {
+          "type": "Action.OpenUrl",
+          "title": "Edit meeting",
+          "url": "https://teams.microsoft.com/_#/scheduling-form/?&eventId=${encodedEventId}&providerType=0"
+        },
+        {
+          "type": "Action.ToggleVisibility",
+          "id": "toggle_invitees_1",
+          "title": "Show/Hide Invitees",
+          "targetElements": [ "members_1_1" ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "**This meeting is being organised by you.",
+      "wrap": true,
+      "size": "small"
+    }
+  ]
+}
