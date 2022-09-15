@@ -2,7 +2,7 @@
 
 Bot Framework v4 using adaptive cards bot sample
 
-This bot has been created using [Bot Framework](https://dev.botframework.com), is shows how to send an Adaptive Card from the bot to the user.
+This bot has been created using [Bot Framework](https://dev.botframework.com), is shows how to send an Adaptive Card from the bot to the user and contains Action.Execute.
 
 ## Prerequisites
 
